@@ -1,169 +1,265 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Login</title>
-     <style>
-        
-login-box{
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
-}
-section{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    width: 100%;
-   /* background-image: url(https://www.nicepng.com/png/detail/26-266973_image-page-transparent-background-oasis-skin-1-png.png);*/
-    background-size:cover;
-    position: relative;
-}
-section img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    pointer-events: none;
-}
-.login-box{
-    position: fixed;
-    width: 400px;
-    height: 450px;
-    background: transparent;
-    border: 2px solid rgba(255,255,255,.5);
-    border-radius:20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-h2{
-    font-size: 2em;
-    color:white;
-    text-align: center;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            height: 100%;
+            width: 100%;
+        }
 
-.input-box{
-    position: relative;
-    width: 310px;
-    margin: 30px 0;
-    border-bottom: 2px solid white;
-}
-.input-box label{
-    position: absolute;
-    top: 50%;
-    left: 5px;
-    transform: translateY(-50%);
-    font-size: 1em;
-    color: white;
-    pointer-events: none;
-    transition: .5s;
-}
-.input-box input:focus~label,
-.input-box input:valid~label{
-    top: -5px;
-}
-.input-box input{
-    width: 100%;
-    height: 50px;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 1em;
-    color: white;
-    padding: 0 35px 0 5px;
-}
-.input-box .icon{
-    position: absolute;
-    right: 8px;
-    color: white;
-    font-size: 1.2em;
-    line-height: 57px;
-}
-.remember-forgot{
-    margin: -15px 0 15px;
-    font-size: .9em;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-}
-.remember-forgot label input{
-    margin-right: 3px;
-}
-.remember-forgot a{
-    color: white;
-    text-decoration: none;
-}
-.remember-forgot a:hover{
-    text-decoration: underline;
-}
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            width: 100%;
+            background-image: url("login1.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
 
-button{
-    width: 100%;
-    height: 40px;
-    background: white;
-    border: none;
-    outline: none;
-    border-radius: 40px;
-    cursor: auto;
-    font-size: lem;
-    color: black;
-    font-weight: 500;
-}
-.register-link{
-    font-size: .9em;
-    color: white;
-    text-align: center;
-    margin: 25px 0 10px;
-}
-.register-link p a{
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-}
-.register-link p a:hover{
-    text-decoration: underline;
-}
-     </style>
-    </head>
+        .login-box {
+            position: relative;
+            width: 400px;
+            height: 450px;
+            background: rgba(0, 0, 0, 0.5); /* Adding some transparency to the background */
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2em;
+            color: white;
+            text-align: center;
+        }
+
+        .input-box {
+            position: relative;
+            width: 310px;
+            margin: 30px 0;
+            border-bottom: 2px solid white;
+        }
+
+        .input-box label {
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size: 1em;
+            color: white;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+
+        .input-box input:focus ~ label,
+        .input-box input:valid ~ label {
+            top: -5px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 50px;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1em;
+            color: white;
+            padding: 0 35px 0 5px;
+        }
+
+        .input-box .icon {
+            position: absolute;
+            right: 8px;
+            color: white;
+            font-size: 1.2em;
+            line-height: 57px;
+        }
+
+        .remember-forgot {
+            margin: -15px 0 15px;
+            font-size: 0.9em;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .remember-forgot label input {
+            margin-right: 3px;
+        }
+
+        .remember-forgot a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            width: 100%;
+            height: 40px;
+            background: white;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 1em;
+            color: black;
+            font-weight: 500;
+        }
+
+        .register-link {
+            font-size: 0.9em;
+            color: white;
+            text-align: center;
+            margin: 25px 0 10px;
+        }
+
+        .register-link p a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .register-link p a:hover {
+            text-decoration: underline;
+        }
+
+        #sidenav {
+            width: 170px;
+            background-color: black;
+            height:100vh;
+            position: fixed;
+            right:0%;
+            top:0%;
+            z-index:1;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 10px;
+             justify-content: space-between;
+            padding-left: 0%;
+             padding-right: 0%;
+        }
+
+          nav ul li{
+        list-style-type: none;
+        margin: 50px 20px;
+        padding:10px
+    }
+    
+    nav ul li a{
+        color:white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    
+
+        #menubtn {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            position: fixed;
+            right: 30px;
+            top: 20px;
+            border-radius: 3px;
+            z-index: 1; /* Ensure the button is above other elements */
+            cursor: pointer;
+        }
+
+        #menubtn img {
+            width: 25px;
+            background-color: black;
+            margin-top: 3px;
+        }
+        nav ul li a:hover{
+            color:red;
+            transition: .3s;
+            
+        }
+        .navbar-a{
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
 <body>
+    <div id="sidenav">
+        <nav>
+            <ul>
+                <li><a class="navbar-a" href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </div>
     <section class="login1">
-        <img src="https://www.nicepng.com/png/detail/26-266973_image-page-transparent-background-oasis-skin-1-png.png">
         <div class="login-box">
-            <from action="">
-        <h2>Login</h2>
-        <div class="input-box">
-            <span class="icon">
-            <ion-icon name="mail"></ion-icon></span>
-            <input type="email" required>
-            <label>Email</label>
+            <form action="">
+                <h2>Login</h2>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="mail"></ion-icon>
+                    </span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon">
+                        <ion-icon name="lock"></ion-icon>
+                    </span>
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="#">Forgot Password?</a>
+                </div>
+
+                <button type="submit">Login</button>
+                <div class="register-link">
+                    <p>Don't have an account? <a href="#">Register</a></p>
+                </div>
+            </form>
         </div>
-        <div class="input-box">
-            <span class="icon">
-            <ion-icon name="lock"></ion-icon></span>
-            <input type="password" required>
-            <label>Password</label>
-        </div>
-
-        <div class="remember-forgot">
-        <label><input type="checkbox">Remember me</label>
-        <a href="#">Forgot Password?</a></div>
-
-<button type="submit">Login</button>
-<div class="register-link">
-<p>Don't have an account? <a href="#">Register</a></p></div>
-    </from>
-</div>
     </section>
+    <div id="menubtn">
+        <img src="menu-removebg-preview.png" id="menu">
+    </div>
+    <script>
+        var menubtn = document.getElementById("menubtn");
+        var sidenav = document.getElementById("sidenav");
+        var menu = document.getElementById("menu");
+        
+        sidenav.style.right = "-170px"; // Ensure the sidebar is hidden initially
 
-    </section>
-<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-
+        menubtn.onclick = function() {
+            if (sidenav.style.right === "-170px") {
+                sidenav.style.right = "0";
+            } else {
+                sidenav.style.right = "-170px";
+            }
+        }
+    </script>
 </body>
+</html>

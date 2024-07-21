@@ -55,7 +55,7 @@
   <div class="container my-5">
     <div>
       <h2>Features</h2><br><br>
-      <p><img src="feature1.jpg" alt="f1" class="img-f1">&nbsp;&nbsp;&nbsp;&nbsp;The foods we eat contain nutrients. Nutrients are substances
+      <p class="passage"><img src="feature1.jpg" alt="f1" class="img-f1">The foods we eat contain nutrients. Nutrients are substances
         required by the body to perform its basic functions. Nutrients must be obtained from our diet since the human
         body can not make them. Nutrients have one or more of three basic functions: they provide energy, contribute to
         body structure, and/or regulate chemical processes in the body. These basic functions allow us to detect and
@@ -66,7 +66,7 @@
     </div><br><br>
 
     <div>
-      <p><img src="feature2.jpg" alt="f2" class="img-f2">&nbsp;&nbsp;&nbsp;&nbsp;At the most basic level, nutrition is about eating a regular,
+      <p><img src="feature2.jpg" alt="f2" class="img-f2">At the most basic level, nutrition is about eating a regular,
         balanced diet. Good nutrition helps fuel your body. The foods you eat supply the nutrients your body needs to
         maintain your brain, muscle, bone, nerves, skin, blood circulation, and immune system.Good nutrition is about
         healthy eating. This means regularly choosing healthy foods and beverages. A healthy eating plan should give
@@ -125,18 +125,21 @@
 
 
     <div id="menubtn">
-      <img class="img1" src="menu-removebg-preview.png" id="menu">
+      <img class="img1" src="menu12.png" id="menu">
     </div>
-    <script> var menubtn = document.getElementById("menubtn")
-      var sidenav = document.getElementById("sidenav")
-      var menu = document.getElementById("menu")
-      menubtn.onclick = function () {
-        if (sidenav.style.right == "-250px") {
-          sidenav.style.right = "0";
-        }
-        else {
-          sidenav.style.right = "-250px"
-        }
+    <script>
+      var menubtn = document.getElementById("menubtn");
+      var sidenav = document.getElementById("sidenav");
+      var menu = document.getElementById("menu");
+      
+      sidenav.style.right = "-170px"; // Ensure the sidebar is hidden initially
+
+      menubtn.onclick = function() {
+          if (sidenav.style.right === "-170px") {
+              sidenav.style.right = "0";
+          } else {
+              sidenav.style.right = "-170px";
+          }
       }
     </script>
 </body>

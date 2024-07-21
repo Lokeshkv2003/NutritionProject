@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 .navbar{
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(home1.png);
     background-size:cover;
@@ -113,6 +113,8 @@ nav ul li a:hover{
 .img-f1 {
   float: left;
   margin: 0 15px 15px 0;
+  margin-left: 20px;
+  margin-right: 40px;
   width: 200px; /* Adjust the width as needed */
   height: auto;
   border-radius: 8px;
@@ -129,6 +131,7 @@ nav ul li a:hover{
 .img-f2 {
     float: right;
     margin: 0 0 15px 15px; /* Adjust margin to provide spacing */
+    margin-right: 20px;
     width: 200px; /* Adjust the width as needed */
     height: auto;
     border-radius: 8px;

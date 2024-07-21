@@ -19,7 +19,7 @@
         box-sizing: border-box;
     }
     .navbar{
-        height: 90vh;
+        height: 100vh;
         width: 100%;
         background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(about.png);
         background-size:cover;
@@ -356,19 +356,22 @@ Tomatoes and avocados<br>
 
 
     <div id="menubtn">
-        <img class="img1" src="menu-removebg-preview.png" id="menu">
+        <img class="img1" src="menu12.png" id="menu">
        </div>
-       <script> var menubtn=document.getElementById("menubtn")
-        var sidenav=document.getElementById("sidenav")
-        var menu=document.getElementById("menu")
-    menubtn.onclick=function(){
-      if(sidenav.style.right=="-250px"){
-        sidenav.style.right="0";
-      }
-      else{
-        sidenav.style.right="-250px"
-      }
-       }
-       </script>
+       <script>
+        var menubtn = document.getElementById("menubtn");
+        var sidenav = document.getElementById("sidenav");
+        var menu = document.getElementById("menu");
+        
+        sidenav.style.right = "-170px"; // Ensure the sidebar is hidden initially
+  
+        menubtn.onclick = function() {
+            if (sidenav.style.right === "-170px") {
+                sidenav.style.right = "0";
+            } else {
+                sidenav.style.right = "-170px";
+            }
+        }
+      </script>
       </body>
 </html>
